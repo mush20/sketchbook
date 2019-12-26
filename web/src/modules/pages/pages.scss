@@ -1,0 +1,66 @@
+@import "../../styles/main";
+
+.pages {
+  @include container();
+  flex-direction: row;
+
+  &__left-panel {
+    flex: 0 0 20%;
+    padding: $padding-size;
+    background-color: $color-background;
+  }
+
+  &__page-controls {
+    padding-bottom: $padding-size;
+    text-align: right;
+  }
+
+  &__list {
+    &-item {
+      @include box-shadow();
+      cursor: pointer;
+      padding: $padding-size;
+      background-color: white;
+
+      &:before {
+        content: "\2219";
+      }
+
+      &--selected {
+        background-color: darken($color-background, 30%);
+
+        &:before {
+          content: "\279E";
+        }
+      }
+    }
+  }
+
+  &__empty {
+    @include container();
+    @include flex-center();
+    background-color: darken($color-background, 30%);
+  }
+
+  &__canvas {
+    flex: 1 0 70%;
+
+    &:hover {
+      cursor: crosshair;
+    }
+  }
+
+  &__title {
+    width: 180px;
+
+    input {
+      width: 175px;
+    }
+
+    &-actions {
+      display: flex;
+      justify-content: space-between;
+      padding-top: $padding-size;
+    }
+  }
+}

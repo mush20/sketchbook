@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  web:
+    container_name: web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - './web:/web'
+    ports:
+      - '3000:3000'

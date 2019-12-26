@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "bellish",
+  "version": "1.0.0",
+  "description": "web application for drawing with the mouse.",
+  "scripts": {
+    "start": "docker-compose up -d --build",
+    "serve": "yarn workspace web install && yarn workspace web run start"
+  },
+  "keywords": [],
+  "author": "Pedro Mello <pedrohmello@gmail.com>",
+  "license": "ISC",
+  "workspaces": [
+    "web"
+  ]
+}

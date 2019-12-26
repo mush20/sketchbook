@@ -1,0 +1,16 @@
+@import "../../styles/main";
+
+.dialog {
+  @include container();
+  @include flex-center();
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(10, 10, 10, 0.5);
+
+  &__card {
+    @include box-shadow();
+    background-color: white;
+    padding: 24px;
+  }
+}
